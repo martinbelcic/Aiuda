@@ -1,0 +1,146 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.bg-primary {
+  background-color: #1b5f56 !important;
+}
+
+section {
+  padding: 8rem 0;
+  border-top: 1px #1b5f56 solid;
+}
+
+.donar{
+  padding: 5rem 0;
+}
+
+.custom-checkbox, .custom-radio{
+  float: left;
+  margin: 10px;
+}
+
+#si, #no{
+	margin-top: 10px;
+}
+
+.radio{
+	margin-right: 10px;
+}
+
+.boton {
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
+i{
+  margin-right: 10px;
+}
+
+ul li{
+  list-style: none;
+}
+
+ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+ul li:hover a{
+  color: grey;
+}
+
+footer h5{
+  padding-left: 40px;
+}
+
+.copy{
+  border-top: 1px solid grey;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+nav ul li a{
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.link-admin{
+  text-decoration: none;
+  color: white;
+}
+
+.link-admin:hover{
+  color: lightgrey;
+  text-decoration: none;
+}
+
+section.bg-primary{
+  min-height: 525px;
+}
+
+.tarjeta{
+  background-color: rgba(38, 38, 38, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.badge{
+  float: left;
+  margin: 5px;
+}
+
+.portfolio-item{
+  min-height: 500px;
+}
+
+.portfolio-item > div > div > h5 {
+  height: 30px;
+  color: blue;
+}
+
+.portfolio-item > div > div > .card-text { 
+  height: 60px;
+  font-size: 12px;
+}
+
+.portfolio-item > div > div > .estado {
+  margin-top:10px;
+  color: grey;
+}
+
+.portfolio-item > div > div > div > span{
+  height: 10%;
+}
