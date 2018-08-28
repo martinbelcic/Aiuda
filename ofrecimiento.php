@@ -35,9 +35,13 @@
                 }
             }
         }
+        $path = "imagenes/ofrecimientos/".$id_ofrecimiento;
+        if(!file_exists($path)){
+            $path = "http://placehold.it/700x300";
+        }
         $ofrecimiento .= '
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+                <img class="card-img-top img-fluid" src="'.$path.'" alt="">
                 <div class="card-body">
                   <h3 class="card-title">'.$item['titulo'].'</h3>
                   <p class="card-text">'.$item['descripcion'].'</p>

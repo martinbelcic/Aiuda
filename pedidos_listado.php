@@ -10,7 +10,7 @@
             $listado .= '
                 <tr>
                     <td>'.$pedido['id_pedido'].'</td>
-                    <td>Titulo</td>
+                    <td>'.$pedido['titulo'].'</td>
                     <td>'.$pedido['descripcion'].'</td>
                     <td>'.$pedido['estado'].'</td>
                     <td>'.$pedido['busca'].'</td>

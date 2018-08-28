@@ -11,7 +11,7 @@
             $listado .= '
                 <tr>
                     <td>'.$ofrecimiento['id_ofrecimiento'].'</td>
-                    <td>Titulo</td>
+                    <td>'.$ofrecimiento['titulo'].'</td>
                     <td>'.$ofrecimiento['descripcion'].'</td>
                     <td>'.$ofrecimiento['estado'].'</td>
                     <td>'.$ofrecimiento['envio'].'</td>

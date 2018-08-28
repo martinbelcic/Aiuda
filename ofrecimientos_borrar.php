@@ -19,8 +19,10 @@
     }
     
     if($confirma != ''){
-        $borrado = mysqli_query($db, "DELETE FROM ofrecimientos WHERE id_ofrecimiento = '$id';");
+        $comentario = mysqli_query($db, "DELETE FROM cometario_ofrecimiento WHERE id_ofrecimiento = '$id';");
+        $posible = mysqli_query($db, "DELETE FROM posibles WHERE id_ofrecimiento = '$id';");
         $borra_tag = mysqli_query($db, "DELETE FROM tag_ofrecimiento WHERE id_ofrecimiento = '$id';");
+        $borrado = mysqli_query($db, "DELETE FROM ofrecimientos WHERE id_ofrecimiento = '$id';");
         $borrado_msg = "Registro eliminado con exito.";
     }
 ?>

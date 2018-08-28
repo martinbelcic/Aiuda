@@ -3,6 +3,8 @@
 
     $confirma = '';
     
+    $id = $_REQUEST['id'];
+
     $query = mysqli_query($db, "SELECT *FROM usuarios WHERE id_usuario = '".$_SESSION['id_usuario']."';");
     
     $usuario = mysqli_fetch_assoc($query);

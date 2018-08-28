@@ -31,11 +31,15 @@
           }
         }
       }
+      $path = "imagenes/pedidos/".$pedido['id_pedido'];
+      if(!file_exists($path)){
+        $path = "http://placehold.it/700x300";
+      }
       $listado .= '
         <div class="row tarjeta">
           <div class="col-md-7">
-            <a href="#">
-              <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            <a href="pedido.php?id='.$pedido['id_pedido'].'">
+              <img class="img-fluid rounded mb-3 mb-md-0 img" src="'.$path.'" alt="">
             </a>
           </div>
           <div class="col-md-5">

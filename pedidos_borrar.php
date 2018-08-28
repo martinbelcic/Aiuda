@@ -3,7 +3,10 @@
     require('check_admin.php');
     
     $id = $_REQUEST['id'];
-    $confirma = $_REQUEST['confirma'];
+
+    $confirma = '';
+    if(isset($_REQUEST['confirma']))
+        $confirma = $_REQUEST['confirma'];
     
     $borrado_msg = '';
     
@@ -15,8 +18,10 @@
     }
     
     if($confirma != ''){
-        $borrado = mysqli_query($db, "DELETE FROM pedidos WHERE id_pedido = '$id';");
+        $com = mysqli_query($db, "DELETE FROM comentario_pedido WHERE id_pedido = '$id';");
+        $posible = mysqli_query($db, "DELETE FROM posibles WHERE id_pedido = '$id';");
         $borra_tag = mysqli_query($db, "DELETE FROM tag_pedido WHERE id_pedido = '$id';");
+        $borrado = mysqli_query($db, "DELETE FROM pedidos WHERE id_pedido = '$id';");
         $borrado_msg = "Registro eliminado con exito.";
     }
 ?>

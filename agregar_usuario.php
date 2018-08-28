@@ -31,8 +31,8 @@
             
         $contra = md5($contra.'misalt');
         $actualiza = mysqli_query($db, "INSERT INTO usuarios (nombre, apellido, email, contrasena, nombreong, telefono, celular, direccion_calle, direccion_piso, direccion_dpto, direccion_numero, direccion_codpos, fecha_nacimiento, tipo) VALUES ('$nombre', '$apellido', '$email', '$contra', '$nombreong', '$telefono', '$celular', '$direccion_calle', '$direccion_piso', '$direccion_dpto', '$direccion_numero', '$direccion_codpos', '$fecha_nac', '$tipo');");
-       
-        $confirma_msg = 'si';
+        if($actualiza = 'si')
+            $confirma_msg = 'si';
     }
     
 ?>

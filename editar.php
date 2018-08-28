@@ -166,9 +166,10 @@
       <?php
         if($actualizado == 'si'){
       ?>
-      <div class="container">
+      <div class="container mt-1">
         <div class="col-12 text-center text-white">
-          <p>El registro se actualizo correctamiente. <a href="inicio.php" class="btn btn-secondary">Continuar</a></p>
+          <p>El registro se actualizo correctamiente.</p>
+           <a href="inicio.php" class="btn btn-secondary">Continuar</a>
         </div>
       </div>
       <?php 

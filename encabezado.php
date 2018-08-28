@@ -21,21 +21,28 @@
                         $id_ofrecimiento = $ofrecimiento['id_ofrecimiento'];
                         $query2 = mysqli_query($db, "SELECT * FROM tag_ofrecimiento WHERE id_ofrecimiento = '$id_ofrecimiento';");
                         if($query2){//busco los tags del ofrecimiento
+                          $tags = '';
                           while($tag_id = mysqli_fetch_assoc($query2)){
                             $id_tag = $tag_id['id_tag'];
                             $query3 = mysqli_query($db, "SELECT nombre FROM tags WHERE id_tag = '$id_tag';");
                             if($query3){//busco nombres de los tags
-                              
+                              $tag = mysqli_fetch_assoc($query3);
+                              $tags =  '<span class="badge badge-secondary">'.$tag['nombre'].'</span>';
                             }
+                          }
+                          $path = "imagenes/ofrecimientos/".$ofrecimiento['id_ofrecimiento'];
+                          if(!file_exists($path)){
+                            $path = "http://placehold.it/700x400";
                           }
                           $opciones .= '
                                   <div class="col-lg-4 col-sm-6 portfolio-item">
                                     <div class="card h-100">
-                                      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                      <a href="#"><img class="card-img-top img-show" src="'.$path.'" alt=""></a>
                                       <div class="card-body">
                                         <h5>'.$ofrecimiento['titulo'].'</h5>
                                         <p class="card-text">'.$ofrecimiento['descripcion'].'</p>
-                                        <p class="estado">'.$ofrecimiento['estado'].'</p>
+                                        <p class="estado">'.ucfirst($ofrecimiento['estado']).'</p>
+                                        <div class="row p-2">'.$tags.'</div>
                                         <div class="text-center">
                                           <a class="btn btn-primary form-control" href="editar.php?id='.$ofrecimiento['id_ofrecimiento'].'&tipo='.$user_db['tipo'].'">Editar</a>
                                           <a class="btn btn-danger form-control mt-1" href="eliminar.php?id='.$ofrecimiento['id_ofrecimiento'].'&tipo='.$user_db['tipo'].'">Eliminar</a>
@@ -62,21 +69,28 @@
                         $id_pedido = $pedido['id_pedido'];
                         $query2 = mysqli_query($db, "SELECT * FROM tag_pedido WHERE id_pedido = '$id_pedido';");
                         if($query2){//busco los tags del ofrecimiento
+                          $tags = '';
                           while($tag_id = mysqli_fetch_assoc($query2)){
                             $id_tag = $tag_id['id_tag'];
                             $query3 = mysqli_query($db, "SELECT nombre FROM tags WHERE id_tag = '$id_tag';");
                             if($query3){//busco nombres de los tags
-                              
+                              $tag = mysqli_fetch_assoc($query3);
+                              $tags =  '<span class="badge badge-secondary">'.$tag['nombre'].'</span>';                              
                             }
+                          }
+                          $path = "imagenes/pedidos/".$pedido['id_pedido'];
+                          if(!file_exists($path)){
+                            $path = "http://placehold.it/700x400";
                           }
                           $opciones .= '
                                   <div class="col-lg-4 col-sm-6 portfolio-item">
                                     <div class="card h-100">
-                                      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                      <a href="#" class="portfolio-conatiner"><img class="card-img-top img-show" src="'.$path.'" alt=""></a>
                                       <div class="card-body">
                                         <h5>'.$pedido['titulo'].'</h5>
                                         <p class="card-text">'.$pedido['descripcion'].'</p>
-                                        <p class="estado">'.$pedido['estado'].'</p>
+                                        <p class="estado">'.ucfirst($pedido['estado']).'</p>
+                                        <div class="row p-2">'.$tags.'</div>
                                         <div class="text-center">
                                           <a class="btn btn-primary form-control" href="editar.php?id='.$pedido['id_pedido'].'&tipo='.$user_db['tipo'].'">Editar</a>
                                           <a class="btn btn-danger form-control mt-1" href="eliminar.php?id='.$pedido['id_pedido'].'&tipo='.$user_db['tipo'].'">Eliminar</a>

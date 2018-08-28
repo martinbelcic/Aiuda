@@ -11,7 +11,7 @@
       $contra = $_POST['contra'];
       
       $contra = md5($contra . 'misalt');
-      
+      echo $contra;
       $usuario = mysqli_query($db, "SELECT * FROM usuarios WHERE email = '$email' AND contrasena = '$contra';");
       
       if($usuario){

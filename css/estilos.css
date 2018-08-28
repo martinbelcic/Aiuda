@@ -107,7 +107,7 @@ nav ul li a{
 }
 
 section.bg-primary{
-  min-height: 525px;
+  min-height: 538px;
 }
 
 .tarjeta{
@@ -143,4 +143,19 @@ section.bg-primary{
 
 .portfolio-item > div > div > div > span{
   height: 10%;
+}
+
+.img-show {
+  width: 100% !important;
+  height: 100%;
+}
+
+.img-container {
+  width: 700px;
+  height: 300px;
+}
+
+.portfolio-container {
+   width: 700px;
+   max-height: 400px;
 }
